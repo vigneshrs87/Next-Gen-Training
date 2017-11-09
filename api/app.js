@@ -17,11 +17,21 @@ var http = require('http');
 var availablePort = 0;
 var tmpUploadPath;
 
-getPort().then(port => {
+/* getPort().then(port => {
   availablePort = port;
   app.listen(availablePort);
   console.log(availablePort);
-});
+}); */
+
+var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
+    ip   = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
+
+app.listen(port, ip);
+console.log('Server running on http://%s:%s', ip, port);
+
+app.get('/', function (req, res) {
+  console.log('received');
+}
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
