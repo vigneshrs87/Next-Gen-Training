@@ -32,7 +32,7 @@ console.log('Server running on http://%s:%s', ip, port);
 app.get('/', function (req, res) {
   res.render('index.html');
   console.log('received');
-}
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
