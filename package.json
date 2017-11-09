@@ -6,7 +6,6 @@
     "start": "node api/app.js",
     "test": "ng test"
   },
-  "private": true,
   "main": "api/app.js",
   "dependencies": {
     "@angular/animations": "^4.2.4",
