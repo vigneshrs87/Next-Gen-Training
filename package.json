@@ -63,5 +63,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/vigneshrs87/Next-Gen-Training"
-  }
+  },
+  "homepage": "http://github.com/openshift/nodejs-ex"
 }
